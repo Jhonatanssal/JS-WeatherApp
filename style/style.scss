@@ -10,12 +10,15 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(rgb(57, 66, 119), rgb(142, 171, 175));
+  background: linear-gradient(rgb(221, 86, 8), rgb(250, 199, 122));
   font-family: sans-serif;
   color: white;
 }
 
-.weather,
-.temperature {
+#cont {
   display: none;
+}
+
+#icon {
+  width: 10rem;
 }
