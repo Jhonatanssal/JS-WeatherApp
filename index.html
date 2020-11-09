@@ -10,32 +10,38 @@
 
 </head>
 <body class="">
+
   <div class="container d-flex flex-column align-items-center justify-content-center w-100 h-100">
+
     <h1>WeatherApp</h1>
+
     <div class="form ">
-      <form action="" class="form-inline">
+      <form action="" class="form-inline" id="form">
         <div class="form-group mb-5">
           <input type="text" id="search" placeholder="Enter city" class="form-control">
           <input type="submit" value="Search" class="form-control btn btn-secondary">
         </div>
       </form>
     </div>
+
     <div class="weather bg-secondary w-75 d-flex justify-content-between mb-5">
-      <span class="city">
+      <span class="city" id="city">
         City
       </span>
-      <span class="icon">
+      <span class="icon" id="icon">
         <img src="" alt="Weather Icon">
       </span>
     </div>
+
     <div class="temperature d-flex flex-column align-items-center">
       <h2 id="temperature">
         15 C°
       </h2>
-      <h3 class="summary">
+      <h3 class="summary" id="summary">
         Summary
       </h3>
     </div>
+
   </div>
 
   <script src="./dist/main.js"></script>
