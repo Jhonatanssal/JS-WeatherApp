@@ -1,22 +1,33 @@
-import getWeather from "./api";
-
-const { default: Weather } = require("./weather");
-
 const dom = () => {
-
-  getWeather('medellin');
-
+  const cont1 = document.getElementById('weather');
+  const cont2 = document.getElementById('temperature');
   const temp = document.getElementById('temperature');
-  const summ = document.getElementById('summary');
   const cit = document.getElementById('city');
-  const ic = document.getElementById('icon');
+  const summ = document.getElementById('summary');
+  const icon = document.getElementById('icon');
+  const form = document.getElementById('form');
 
-  let weather = new Weather(cit, temp, summ, ic);
+  const btn = document.getElementById('button');
 
-  temp.textContent = weather.temperature;
-  summ.textContent = weather.summary;
-  cit.textContent = weather.city;
-  ic.textContent = weather.icon;
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const search = document.getElementById('search').value;
+
+    let api = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=96167910369f1228a67e094ac8e334b6`;
+
+    fetch(api, {mode: 'cors'})
+      .then(response => {return response.json()})
+      .then(item => {
+        cont1.style.display = 'block';
+        cont2.style.display = 'block';
+        temp.textContent = item.main.temp + ' C°';
+        summ.textContent = item.weather[0].description.charAt(0).toUpperCase() + item.weather[0].description.slice(1);;
+        cit.textContent = item.name;
+        icon.src = `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`
+      })
+    form.reset();
+  })
 }
 
 export default dom;
