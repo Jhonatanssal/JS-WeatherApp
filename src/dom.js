@@ -1,9 +1,8 @@
 const dom = () => {
-  const cont1 = document.getElementById('weather');
-  const cont2 = document.getElementById('temperature');
+  const cont = document.getElementById('cont');
   const temp = document.getElementById('temperature');
-  const cit = document.getElementById('city');
-  const summ = document.getElementById('summary');
+  const city = document.getElementById('city');
+  const summary = document.getElementById('summary');
   const icon = document.getElementById('icon');
   const form = document.getElementById('form');
 
@@ -19,11 +18,10 @@ const dom = () => {
     fetch(api, {mode: 'cors'})
       .then(response => {return response.json()})
       .then(item => {
-        cont1.style.display = 'block';
-        cont2.style.display = 'block';
+        cont.style.display = 'flex';
         temp.textContent = item.main.temp + ' C°';
-        summ.textContent = item.weather[0].description.charAt(0).toUpperCase() + item.weather[0].description.slice(1);;
-        cit.textContent = item.name;
+        summary.textContent = item.weather[0].description.charAt(0).toUpperCase() + item.weather[0].description.slice(1);
+        city.textContent = item.name;
         icon.src = `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`
       })
     form.reset();
