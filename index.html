@@ -19,25 +19,25 @@
       <form action="" class="form-inline" id="form">
         <div class="form-group mb-5">
           <input type="text" id="search" placeholder="Enter city" class="form-control">
-          <input type="submit" value="Search" class="form-control btn btn-secondary">
+          <input id="button" type="submit" value="Search" class="form-control btn btn-secondary">
         </div>
       </form>
     </div>
 
-    <div class="weather bg-secondary w-75 d-flex justify-content-between mb-5">
-      <span class="city" id="city">
-        City
+    <div class="weather bg-secondary w-50 d-flex justify-content-between mb-5" id="weather">
+      <span class="city">
+        <h2 id="city">City</h2>
       </span>
-      <span class="icon" id="icon">
-        <img src="" alt="Weather Icon">
+      <span class="icon">
+        <img id="icon" src="" alt="Weather Icon">
       </span>
     </div>
 
-    <div class="temperature d-flex flex-column align-items-center">
+    <div class="temperature d-flex flex-column align-items-center" id="temperature">
       <h2 id="temperature">
         15 C°
       </h2>
-      <h3 class="summary" id="summary">
+      <h3 id="summary">
         Summary
       </h3>
     </div>
