@@ -4,7 +4,7 @@
 
 > This is a Weather App built using OpenWeatherMap API, JavaScript, Bootstrap, and Webpack.
 
-![screenshot](./src/img/app_screenshot.png)
+![screenshot](./app_screenshot.png)
 
 > This app lets you know the current weather in an specified city, it shows city name, temperature, an icon referred to the actual weather and a description of the weather.
 
