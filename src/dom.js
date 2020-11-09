@@ -13,19 +13,19 @@ const dom = () => {
 
     const search = document.getElementById('search').value;
 
-    let api = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=96167910369f1228a67e094ac8e334b6`;
+    const api = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=96167910369f1228a67e094ac8e334b6`;
 
-    fetch(api, {mode: 'cors'})
-      .then(response => {return response.json()})
+    fetch(api, { mode: 'cors' })
+      .then(response => response.json())
       .then(item => {
         cont.style.display = 'flex';
-        temp.textContent = item.main.temp + ' C°';
+        temp.textContent = `${item.main.temp} C°`;
         summary.textContent = item.weather[0].description.charAt(0).toUpperCase() + item.weather[0].description.slice(1);
         city.textContent = item.name;
-        icon.src = `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`
-      })
+        icon.src = `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
+      });
     form.reset();
-  })
-}
+  });
+};
 
 export default dom;
