@@ -1,5 +1,6 @@
 class Weather {
-  constructor(temperature, summary, icon) {
+  constructor(city, temperature, summary, icon) {
+    this.city = city;
     this.temperature = temperature;
     this.summary = summary;
     this.icon = icon;
