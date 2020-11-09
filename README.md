@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/jssarrazolaa/JS-RestaurantProject/c1face7a8af81db03e7cd4e683fabbc4f5c2c3aa/dist/index.html)
+[Live Demo Link](https://jssarrazolaa.github.io/JS-WeatherApp/)
 
 
 ## Getting Started
