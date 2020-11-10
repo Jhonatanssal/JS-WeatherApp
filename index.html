@@ -28,18 +28,26 @@
 
       <div class="weather w-50 d-flex justify-content-between mb-5 align-items-center">
         <h2 id="city">City</h2>
-          <img id="icon" src="" alt="Weather Icon">
+        <img id="icon" src="" alt="Weather Icon">
       </div>
   
       <div class="temperature d-flex flex-column align-items-center">
-        <h2 id="temperature">
-          15 C°
-        </h2>
+        <div class="d-flex flex-column align-items-center mb-2">
+          <h2 id="temperature">
+            15 C°
+          </h2>
+          <button id="changeF" class="btn btn-primary">Fahrenheit</button>
+          <button id="changeC" class="btn btn-primary">Celsius</button>
+        </div>
         <h3 id="summary">
           Summary
         </h3>
       </div>
 
+    </div>
+
+    <div id="error">
+      <h2 class="text-danger">Please enter a valid city in english</h2>
     </div>
 
   </div>
