@@ -29,8 +29,7 @@ const dom = () => {
         icon.src = `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
 
         buttonF.addEventListener('click', () => {
-          temp.textContent = `${((parseFloat(item.main.temp) * 9/5) + 32).toFixed(2)} F°`;
-          console.log((parseFloat(item.main.temp) * 9/5) + 32);
+          temp.textContent = `${((parseFloat(item.main.temp) * (9 / 5)) + 32).toFixed(2)} F°`;
           buttonF.style.display = 'none';
           buttonC.style.display = 'block';
         });
@@ -39,15 +38,14 @@ const dom = () => {
           temp.textContent = `${item.main.temp} C°`;
           buttonF.style.display = 'block';
           buttonC.style.display = 'none';
-        })
+        });
       })
       .catch(() => {
         cont.style.display = 'none';
         error.style.display = 'block';
-      })
+      });
     form.reset();
   });
 };
 
 export default dom;
-
