@@ -10,32 +10,46 @@
 
 </head>
 <body class="">
+
   <div class="container d-flex flex-column align-items-center justify-content-center w-100 h-100">
+
     <h1>WeatherApp</h1>
-    <div class="form ">
-      <form action="" class="form-inline">
+
+    <div class="form">
+      <form class="form-inline" id="form">
         <div class="form-group mb-5">
           <input type="text" id="search" placeholder="Enter city" class="form-control">
-          <input type="submit" value="Search" class="form-control btn btn-secondary">
+          <input id="button" type="submit" value="Search" class="form-control btn btn-secondary">
         </div>
       </form>
     </div>
-    <div class="weather bg-secondary w-75 d-flex justify-content-between mb-5">
-      <span class="city">
-        City
-      </span>
-      <span class="icon">
-        <img src="" alt="Weather Icon">
-      </span>
+
+    <div id="cont" class="w-75 mx-auto flex-column align-items-center">
+
+      <div class="weather w-50 d-flex justify-content-between mb-5 align-items-center">
+        <h2 id="city">City</h2>
+        <img id="icon" src="" alt="Weather Icon">
+      </div>
+  
+      <div class="temperature d-flex flex-column align-items-center">
+        <div class="d-flex flex-column align-items-center mb-2">
+          <h2 id="temperature">
+            15 C°
+          </h2>
+          <button id="changeF" class="btn btn-primary">Fahrenheit</button>
+          <button id="changeC" class="btn btn-primary">Celsius</button>
+        </div>
+        <h3 id="summary">
+          Summary
+        </h3>
+      </div>
+
     </div>
-    <div class="temperature d-flex flex-column align-items-center">
-      <h2 id="temperature">
-        15 C°
-      </h2>
-      <h3 class="summary">
-        Summary
-      </h3>
+
+    <div id="error">
+      <h2 class="text-danger">Please enter a valid city in English.</h2>
     </div>
+
   </div>
 
   <script src="./dist/main.js"></script>
