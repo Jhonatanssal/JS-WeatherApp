@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 
-import { btnCLogic, btnFLogic, capital, errorD } from "./logic";
+import {
+  btnCLogic, btnFLogic, capital, errorD,
+} from './logic';
 
 const dom = () => {
   const cont = document.getElementById('cont');
